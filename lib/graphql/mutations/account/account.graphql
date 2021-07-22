@@ -1,0 +1,32 @@
+mutation LoginByPassword($account: String!, $password: String!) {
+  loginByPassword(account: $account, password: $password) {
+    accessTokenString
+    userID
+  }
+}
+
+mutation LoginWithApple(
+  $userID: String!
+  $identityToken: String!
+  $name: String
+) {
+  loginWithApple(userID: $userID, identityToken: $identityToken, name: $name) {
+    accessTokenString
+    userID
+  }
+}
+
+mutation LoginByWeChat($code: String!, $platform: NextPlatform!) {
+  loginByWeChat(code: $code, platform: $platform) {
+    accessTokenString
+    userID
+  }
+}
+
+mutation UpdateAccessToken {
+  updateAccessToken
+}
+
+mutation VerifyCode($input: VerifyCodeInput!) {
+  verifyCode(input: $input)
+}

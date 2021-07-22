@@ -1,0 +1,9 @@
+mutation UpdateUserInfo($input: UpdateUserInfoInput) {
+  updateUserInfo(input: $input){
+    userID
+    role
+    userName
+    avatarURL
+    description
+  }
+}

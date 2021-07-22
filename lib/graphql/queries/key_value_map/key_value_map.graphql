@@ -1,0 +1,7 @@
+query KeyValueMap(
+  $funcID: String!
+  $requestBody: MaybeString
+  $platform: NextPlatform
+) {
+  keyValueMap(funcID: $funcID, requestBody: $requestBody, platform: $platform)
+}
